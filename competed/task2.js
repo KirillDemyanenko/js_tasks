@@ -4,7 +4,6 @@
 
 function colourAssociation(array){
     const result = []
-    const obj = {};
 
     for (const key of array) {
         const obj = {};

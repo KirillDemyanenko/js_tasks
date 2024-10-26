@@ -3,20 +3,13 @@
  */
 
 function isPrime(num) {
-    if (num === 0 || num === 1 || num === 4 || num < 0)  {
-        return false;
-    }
-    if (num === 2 || num === 3) {
-        return true
-    }
-    let div = 0
-    for (let i = 1; i <= Math.sqrt(num); i++) {
-        if (num % i === 0) {
-            div++
-        }
-        if (num / i !== i) {
-            div++
+    if (num <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (Math.abs(num) % i === 0) {
+            return false;
         }
     }
-    return div === 2
+    return true;
 }
+console.log(isPrime(37))
+console.log(isPrime(5))
